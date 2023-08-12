@@ -99,3 +99,15 @@ const sortAndPrint = newRowOfNumbers.sort(function (a, b) {
     return a - b;
 });
 console.log(newRowOfNumbers);
+
+
+//Задание 13
+//Напишите функцию sortAndPrint, которая принимает копию массива randomNumbers с помощью оператора spread и сортирует его в порядке возрастания с использованием метода sort(). Затем выведите отсортированный массив чисел в консоль.
+
+let copy = [...randomNumbers];
+
+const sortAndPrint2 = copy.sort(function (a, b) {
+    return a - b;
+});
+console.log(copy);
+console.log(randomNumbers);
