@@ -94,4 +94,59 @@ const eGrades = grades.filter(function(item) {
 console.log(`Grades "E": ${eGrades}`); 
 
 
-Выведите все найденные значения на экран.
+// Создание нового массива с символьными оценками
+// Выведите все найденные значения на экран.
+
+// 1 способ
+const newArr_1 = grades.map(function(elem) {
+     if (80 <= elem && elem <= 100) {
+      return "A";
+     } else if (60 <= elem && elem <= 79) {
+      return "B";
+     } else if (40 <= elem && elem <= 59) {
+      return "C";
+     } else if (20 <= elem && elem <= 39) {
+      return "D";
+     } else {
+       return "E";
+     }
+  });
+  console.log("newArr_1", newArr_1);
+  
+
+  // 2 способ
+  const newArr_2 = grades.map((elem) => {
+     if (80 <= elem && elem <= 100) {
+      return "A";
+     } else if (60 <= elem && elem <= 79) {
+      return "B";
+     } else if (40 <= elem && elem <= 59) {
+      return "C";
+     } else if (20 <= elem && elem <= 39) {
+      return "D";
+     } else {
+       return "E";
+     }
+  });
+  console.log("newArr_2", newArr_2);
+  
+
+  // 3 способ
+  const newArr_3 = [];
+
+  for(let index = 0; index < grades.length; index++) {
+    const elem = grades[index];
+    if (80 <= elem && elem <= 100) {
+      newArr_3.push("A");
+     } else if (60 <= elem && elem <= 79) {
+      newArr_3.push("B");
+     } else if (40 <= elem && elem <= 59) {
+      newArr_3.push("C");
+     } else if (20 <= elem && elem <= 39) {
+      newArr_3.push("D");
+     } else {
+      newArr_3.push("E");
+     }
+  }
+  console.log("newArr_3", newArr_3);
+
